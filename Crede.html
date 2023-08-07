@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registered Credentials</title>
+    <style>
+        body {
+            background-color: #2C2F33;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Registered Credentials</h1>
+    <p>Username: <span id="username"></span></p>
+    <p>Password: <span id="password"></span></p>
+    <p>Email: <span id="email"></span></p>
+
+    <script>
+        // Retrieve the URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+
+        // Get the values of the parameters
+        const username = urlParams.get('username');
+        const password = urlParams.get('password');
+        const email = urlParams.get('email');
+
+        // Set the values in the HTML
+        document.getElementById('username').textContent = username;
+        document.getElementById('password').textContent = password;
+        document.getElementById('email').textContent = email;
+    </script>
+</body>
+</html>
